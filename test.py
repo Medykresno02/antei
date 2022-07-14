@@ -1,4 +1,4 @@
-#test auto deploy
+#test auto deploy okay
 import os
 import time
 import logging
