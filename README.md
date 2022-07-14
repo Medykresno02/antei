@@ -1,1 +1,1 @@
-[![Run on Repl.it](https://repl.it/badge/github/Anteicodes/Anteiku-Api)](https://repl.it/github/Anteicodes/Anteiku-Api)
+[![Run on Repl.it](https://repl.it/badge/github/Medykresno02/antei)](https://repl.it/github/Medykresno02/antei)
