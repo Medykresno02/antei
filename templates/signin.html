@@ -1,0 +1,38 @@
+{% extends "signn.html" %}
+{% block title %}Sign In {% endblock %}
+{% block content %} 
+<script>
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+        })
+    {% if msg  %}
+        Toast.fire({
+            icon: 'error',
+            title: '{{msg}}'
+        })
+    {% elif success %}
+        Toast.fire({
+            icon: 'success',
+            title: '{{success}}'
+        })
+        toastr.success("{{success}}","Success!")
+    {% endif %}
+</script>
+{% csrf_token %}
+<h1 class="h3 mb-3 fw-normal">Sign In</h1>
+<label for="room" class="sr-only">Email Or Phone Number</label>
+<input type="text" class="form-control" name="email" placeholder="Email & Phone Number" required autofocus>
+<label for="pass" class="sr-only">Password</label>
+<input type="password" class="form-control" name="password" placeholder="Password" required>
+<div class="d-grid">
+	<button class="btn btn-lg btn-primary" type="submit">Submit</button>
+</div>
+{% endblock %}

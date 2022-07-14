@@ -1,0 +1,35 @@
+{% extends "sign.html" %}
+{% block title %} Please Check Your Email/WhatsApp {% endblock %}
+{% block content %} 
+<section id="maintenance">
+    <div class="container-fluid">
+        <div class="row full-height-vh">
+            <div class="col-12 d-flex align-items-center justify-content-center gradient-aqua-marine">
+                <div class="card p-3 box-shadow-2">
+                    <div class="card-header text-center">
+                        <h4 class="text-uppercase text-bold-400 grey darken-1">verification</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-block">
+                            <span class="card-title text-center">
+                                <img alt="avtar" class="img-fluid mx-auto d-block pt-2 mb-1" src="https://avatars.githubusercontent.com/u/86209322" style="filter: sepia(100%) hue-rotate(190deg) saturate(500%);" width="100">
+                            </span>
+                        </div>
+                        <div class="card-block text-center">
+                            <h4>Warning</h4>
+                            {% if method == "email" %}
+                            <p>Email verifikasi sudah dikirim, tolong cek di bagian spam</p>
+                            <p>Jika link verifikasi tidak ada, silahkan chat admin web ini pada halaman <a href="/contacts" target="_blank">ini</a> agar di verifikasi</p>
+                            {% elif method == "whatsapp" %}
+                            <p> Link verifikasi sudah dikirim via chat(Whatsapp)</p>
+                            <p>Jika link verifikasi tidak ada, silahkan chat admin web ini pada halaman <a href="/contacts" target="_blank">ini</a> agar di verifikasi</p>
+                            {% endif %}
+                            <div class="mt-2"><i class="fa fa-paper-plane font-large-2" style="color:rgb(8, 115, 255)"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

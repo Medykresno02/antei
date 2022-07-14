@@ -1,0 +1,2 @@
+class FrameNotFound(Exception):
+    pass

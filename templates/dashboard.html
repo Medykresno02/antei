@@ -1,0 +1,179 @@
+{% extends "_base.html" %}
+{% block title %} Dashboard {% endblock %}
+{% block content %}
+<div class="row row-cols-1 row row-cols-md-2 row row-cols-xl-4">
+	<div class="col-xl-3 col-lg-6 col-md-6">
+		<div class="bottom-left shadow-showcase card card-block card-stretch card-height position-relative overflow-hidden card-overlay-image">
+			<div class="card-body res-block">
+				<div class="d-flex align-items-center">
+					<div class="iq-cart-image">
+						<lord-icon src="https://cdn.lordicon.com/iltqorsz.json" trigger="loop" colors="primary:#e83a30,secondary:#30c9e8" style="width:80px;height:80px"></lord-icon>
+					</div>
+					<div class="media-support-info ml-3">
+						<h5 class="text-danger">{{hit}}</h5>
+						<p class="mb-0">Hit</p>
+					</div>
+					<div class="media-support-amount ml-3">
+						<div class="progress-round income-progress salon2-progress-danger mx-auto" data-value="100">
+							<span class="progress-left">
+								<span id="hitcok" class="progress-bar border-danger" style="transform: rotate(0deg);"></span>
+							</span>
+							<span class="progress-right">
+								<span id="hitcokk" class="progress-bar border-danger" style="transform: rotate(0deg);"></span>
+							</span>
+							<div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center text-center">
+								<div id="hit" class="h4 mb-0">0</div>
+							</div>
+						</div>
+					</div>
+					<div class="overlay-image svg-danger">
+						<svg height="100%" viewBox="0 0 264 113" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M108.5 68C82.4829 96.2795 31.0226 108.712 4.54413 112H259C262.2 112 263.333 108.667 263.5 107V6C263.5 1.6 259.167 0.166667 257 0H192.5C172.1 3.2 128 46.6667 108.5 68Z" /></svg>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-6">
+		<div class="bottom-left shadow-showcase card card-block card-stretch card-height position-relative overflow-hidden card-overlay-image">
+			<div class="card-body">
+				<div class="d-flex align-items-center justify-content-between">
+					<div class="iq-cart-image">
+						<lord-icon src="https://cdn.lordicon.com/kekeoctr.json"trigger="loop"colors="primary:#8930e8,secondary:#30c9e8"style="width:80px;height:80px"></lord-icon>
+					</div>
+					<div class="iq-cart-text">
+						<h2>Tersisa</h2>
+						<p id="fhit" class="text-center">0</p>
+					</div>
+				</div>
+				<div class="iq-progress-linear d-inline-block w-100">
+					<div class="iq-progress-bar bg-dark iq-progress-bar">
+						<span id="phit" class="bg-info" data-percent="1"></span>
+					</div>
+				</div>
+			</div>
+			<div class="overlay-image svg-info">
+				<svg height="100%" viewBox="0 0 264 113" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M108.5 68C82.4829 96.2795 31.0226 108.712 4.54413 112H259C262.2 112 263.333 108.667 263.5 107V6C263.5 1.6 259.167 0.166667 257 0H192.5C172.1 3.2 128 46.6667 108.5 68Z" /></svg>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-6">
+		<div class="bottom-left shadow-showcase card card-block card-stretch card-height position-relative overflow-hidden card-overlay-image">
+			<div class="card-body">
+				<div class="d-flex align-items-center justify-content-between">
+					<div class="iq-cart-image">
+						<lord-icon src="https://cdn.lordicon.com/ybfcwnqv.json"trigger="loop"colors="primary:#e88c30,secondary:#e88c30"style="width:80px;height:80px"></lord-icon>
+					</div>
+					<div class="iq-cart-text">
+						<h3>IP Digunakan</h3>
+						<p id="allowed_ip" class="text-center">0</p>
+					</div>
+				</div>
+				<div class="iq-progress-linear d-inline-block w-100">
+					<div class="iq-progress-bar bg-dark iq-progress-bar">
+						<span id="ips" class="bg-warning" data-percent="1"></span>
+					</div>
+				</div>
+			</div>
+			<div class="overlay-image svg-warning">
+				<svg height="100%" viewBox="0 0 264 113" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M108.5 68C82.4829 96.2795 31.0226 108.712 4.54413 112H259C262.2 112 263.333 108.667 263.5 107V6C263.5 1.6 259.167 0.166667 257 0H192.5C172.1 3.2 128 46.6667 108.5 68Z" /></svg>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-6">
+		<div class="bottom-left shadow-showcase card card-block card-stretch card-height position-relative overflow-hidden card-overlay-image">
+			<div class="card-body">
+				<div class="d-flex align-items-center justify-content-between">
+					<div class="iq-cart-image">
+						<lord-icon src="https://cdn.lordicon.com/eqwebkyi.json"trigger="loop"colors="primary:#30c9e8,secondary:#848484"style="width:80px;height:80px"></lord-icon>
+					</div>
+					<div class="iq-cart-text">
+						<h3>IP Tersisa</h3>
+						<p id="ipn" class="text-center">0</p>
+					</div>
+				</div>
+				<div class="iq-progress-linear d-inline-block w-100">
+					<div class="iq-progress-bar bg-dark iq-progress-bar">
+						<span id="ipnn" class="bg-primary" data-percent="1"></span>
+					</div>
+				</div>
+			</div>
+			<div class="overlay-image svg-primary">
+				<svg height="100%" viewBox="0 0 264 113" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M108.5 68C82.4829 96.2795 31.0226 108.712 4.54413 112H259C262.2 112 263.333 108.667 263.5 107V6C263.5 1.6 259.167 0.166667 257 0H192.5C172.1 3.2 128 46.6667 108.5 68Z" /></svg>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="card" style="width: 100%;">
+	<div class="card-body" >
+		<input class="form-control" id="apikey" type="text" placeholder="Readonly input here..." value="{{apikey}}" aria-label="readonly input example" readonly="">
+	</div>
+	<div class="col">
+    	<p align="center">
+			<button type="button" class="btn btn-success px-5 bg-gradient-ohhappiness" id="resetapikey">
+				<i class="bx bx-reset mr-1">
+				</i>Atur Ulang
+			</button>
+		</p>
+	</div>
+</div>
+<script>
+        var nama = "{{nama}}"
+        var apikey="{{apikey}}"
+        var hit={{hit}}
+        var max_hit = {{max_hit}}
+        var max_ip = {{max_ip}}
+        var allow_ip = JSON.parse(htmlDecode("{{allow_ip}}"))
+        const AccessToken = "{{AccessToken}}";
+        $("#hitcok").attr("style",`transform: rotate(${parseInt(180/max_hit*hit)}deg);`)
+        $("#hitcokk").attr("style",`transform: rotate(${parseInt(180/max_hit*hit)}deg);`)
+        $("#phit").attr("data-percent", parseInt(100/max_hit*hit))
+        $("#ips").attr("data-percent", parseInt(100/max_ip*allow_ip.length))
+        $("#ipnn").attr("data-percent", parseInt(100/max_ip*allow_ip.length))
+        $("#apikey").attr("value", "{{apikey}}")
+        document.getElementById("hit").innerHTML = `${parseInt(100/max_hit*hit)}%`
+        document.getElementById("fhit").innerHTML = max_hit-hit
+        document.getElementById("allowed_ip").innerHTML = allow_ip.length
+        document.getElementById("ipn").innerHTML = max_ip-allow_ip.length
+        $("#resetapikey").on("click", function (){
+            $.ajax({"url":"/api-reset", type:"post", data:{"AccessToken":AccessToken}, success:function(r){
+                if(r.apikey){
+                    $("#apikey").val(r.apikey)
+                    Swal.fire({
+                        position: 'top',
+                        icon: 'success',
+                        title: 'Berhasil Di Atur Ulang',
+                        showConfirmButton: false,
+                        timer: 1500
+                        })
+                }else{
+                    Swal.fire({
+                        position: 'top',
+                        icon: 'error',
+                        title: 'Gagal Di Atur Ulang',
+                        showConfirmButton: false,
+                        timer: 1500
+                        })
+                }
+            }})
+        })
+        document.getElementById("apikey").onclick = function(){
+                var Copy=document.getElementById("apikey");
+                Copy.select();
+                Copy.setSelectionRange(0, 99999);
+                document.execCommand("copy");
+                Swal.fire({
+                  position: 'top',
+                  icon: 'success',
+                  title: 'Tersalin Ke Clipboard',
+                  showConfirmButton: false,
+                  timer: 1500
+                })
+            }
+        function htmlDecode(input){
+            var e = document.createElement('textarea');
+            e.innerHTML = input;
+            // handle case of empty input
+            return e.childNodes.length === 0 ? "" : e.childNodes[0].nodeValue;
+        }
+</script>
+{% endblock %}

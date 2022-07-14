@@ -1,0 +1,122 @@
+{% extends "_base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class="row row-cols-1 row row-cols-md-2 row row-cols-xl-4">
+	<div class="col-lg-3 col-md-6">
+		<div class="bottom-left shadow-showcase card card-block card-stretch card-height position-relative overflow-hidden card-overlay-image">
+			<div class="card-body">
+				<div class="d-flex align-items-center justify-content-between">
+					<div class="iq-cart-image">
+						<lord-icon src="https://cdn.lordicon.com/kbtmbyzy.json"trigger="loop"colors="primary:#e83a30,secondary:#30c9e8"style="width:80px;height:80px"></lord-icon>
+					</div>
+					<div class="iq-cart-text">
+						<h2>Waktu</h2>
+						<p id="times" class="mb-0">00:00:00</p>
+					</div>
+				</div>
+				<!-- <div class="iq-progress-linear d-inline-block w-100">
+					<div class="iq-progress-bar bg-dark iq-progress-bar">
+						<span id="tod" class="bg-danger" data-percent="1"></span>
+					</div> 
+				</div>-->
+			</div>
+			<div class="overlay-image svg-danger">
+				<svg height="100%" viewBox="0 0 264 113" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M108.5 68C82.4829 96.2795 31.0226 108.712 4.54413 112H259C262.2 112 263.333 108.667 263.5 107V6C263.5 1.6 259.167 0.166667 257 0H192.5C172.1 3.2 128 46.6667 108.5 68Z" /></svg>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-6">
+		<div class="bottom-left shadow-showcase card card-block card-stretch card-height position-relative overflow-hidden card-overlay-image">
+			<div class="card-body">
+				<div class="d-flex align-items-center justify-content-between">
+					<div class="iq-cart-image">
+						<lord-icon src="https://cdn.lordicon.com/wrprwmwt.json" trigger="loop"colors="primary:#e83a30,secondary:#30c9e8" style="width:80px;height:80px"></lord-icon>
+					</div>
+					<div class="iq-cart-text">
+						<h2>IP Kamu</h2>
+						<p id="aipi" class="mb-0">127.0.0.1</p>
+					</div>
+				</div>
+			</div>
+			<div class="overlay-image svg-danger">
+				<svg height="100%" viewBox="0 0 264 113" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M108.5 68C82.4829 96.2795 31.0226 108.712 4.54413 112H259C262.2 112 263.333 108.667 263.5 107V6C263.5 1.6 259.167 0.166667 257 0H192.5C172.1 3.2 128 46.6667 108.5 68Z" /></svg>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-6">
+		<div class="bottom-left shadow-showcase card card-block card-stretch card-height position-relative overflow-hidden card-overlay-image">
+			<div class="card-body">
+				<div class="d-flex align-items-center justify-content-between">
+					<div class="iq-cart-image">
+						<lord-icon src="https://cdn.lordicon.com/tyounuzx.json" trigger="loop"colors="primary:#e83a30,secondary:#30c9e8" style="width:80px;height:80px"></lord-icon>
+					</div>
+					<div class="iq-cart-text">
+						<h2>Visitor</h2>
+						<img alt="vistod" target="_blank" src="https://counter10.stat.ovh/private/freecounterstat.php?c=1mnq8zldw34h7y4618zrmg9xass7udum" class="mb-0"></img>
+					</div>
+				</div>
+			</div>
+			<div class="overlay-image svg-danger">
+				<svg height="100%" viewBox="0 0 264 113" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M108.5 68C82.4829 96.2795 31.0226 108.712 4.54413 112H259C262.2 112 263.333 108.667 263.5 107V6C263.5 1.6 259.167 0.166667 257 0H192.5C172.1 3.2 128 46.6667 108.5 68Z" /></svg>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-6">
+		<div class="bottom-left shadow-showcase card card-block card-stretch card-height position-relative overflow-hidden card-overlay-image">
+			<div class="card-body">
+				<div class="d-flex align-items-center justify-content-between">
+					<div class="iq-cart-image">
+						<lord-icon src="https://cdn.lordicon.com/elvincae.json" trigger="loop"colors="primary:#e83a30,secondary:#30c9e8" style="width:80px;height:80px"></lord-icon>
+					</div>
+					<div class="iq-cart-text">
+						<h2>Apikey</h2>
+						<input id="key" class="form-control-sm" type="text" value="{{apikey}}" readonly="">
+					</div>
+				</div>
+			</div>
+			<div class="overlay-image svg-danger">
+				<svg height="100%" viewBox="0 0 264 113" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M108.5 68C82.4829 96.2795 31.0226 108.712 4.54413 112H259C262.2 112 263.333 108.667 263.5 107V6C263.5 1.6 259.167 0.166667 257 0H192.5C172.1 3.2 128 46.6667 108.5 68Z" /></svg>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="col-lg-12">
+	<div class="bottom-left shadow-showcase card card-block card-stretch card-height position-relative overflow-hidden card-overlay-image">
+		<div class="card-body">
+			<h2 class="card-title">👋 Yokoso {{nama}}</h2>
+			<li class="card-text">Perlu diketahui bahwa website api ini tidak di buat untuk di pakai secara cuma-cuma</li>
+			<li class="card-text">Kami sudah memberikan 120 request kepada para pengguna baru, untuk menguji/meng-test fitur-fitur yang tersedia pada website api ini</li>
+			<li class="card-text">Jika ingin menggunakan fitur-fitur yang tersedia di website ini tanpa pusing memikirkan limit/batas, silahkan chat admin website ini</li>
+			<li class="card-text">Hampir semua admin di website ini aktif 24 jam, jadi kalau ingin request fitur/report bug/tanya-tanya seputar website api ini/atau seperti teks di atas langsung saja chat admin</li>
+		</div>
+		<div class="overlay-image svg-danger">
+		     <svg height="100%" viewBox="0 0 264 113" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M108.5 68C82.4829 96.2795 31.0226 108.712 4.54413 112H259C262.2 112 263.333 108.667 263.5 107V6C263.5 1.6 259.167 0.166667 257 0H192.5C172.1 3.2 128 46.6667 108.5 68Z" /></svg>
+		</div>
+	</div>
+</div>
+<div class="col-lg-12">
+	<div class="bottom-left shadow-showcase card card-block card-stretch card-height position-relative overflow-hidden card-overlay-image">
+		<div class="card-body">
+			<h2 class="card-title"><i class="las la-map-pin"></i>Announcement</h2>
+			<li class="card-text">Hacker/Defacer/Attacker? Mohon pengertiannya</li>
+			<li class="card-text">Dilarang keras meniru template website api ini</li>
+			<li class="card-text">Menemukan bug atau halaman tidak bisa di buka/error, langsung laporkan ke admin. Demi kenyamanan bersama</li>
+			<li class="card-text">Beberapa fitur error? langsung laporkan ke admin</li>
+		</div>
+		<div class="overlay-image svg-danger">
+		     <svg height="100%" viewBox="0 0 264 113" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M108.5 68C82.4829 96.2795 31.0226 108.712 4.54413 112H259C262.2 112 263.333 108.667 263.5 107V6C263.5 1.6 259.167 0.166667 257 0H192.5C172.1 3.2 128 46.6667 108.5 68Z" /></svg>
+		</div>
+	</div>
+</div>
+
+<script>
+	$(window).on('load', function(){Swal.fire({position: 'top-center',icon: 'info',text: "{{msg}}",showClass: {popup: 'animate__animated animate__lightSpeedInRight'},hideClass: {popup: 'animate__animated animate__lightSpeedOutLeft'}})})
+	function refreshTime() {var date = new Date();var hours = date.getHours() < 10 ? '0'+date.getHours() : date.getHours();var minutes = date.getMinutes() < 10 ? '0'+date.getMinutes() : date.getMinutes();var seconds = date.getSeconds() < 10 ? '0'+date.getSeconds() : date.getSeconds();var dateString = hours + ':' + minutes + ':' + seconds;document.getElementById('times').innerHTML = dateString;}
+	$("#tod").attr("data-percent", `${parseInt(100/24*new Date().getHours())}`);
+	function fuck(tot) {document.getElementById("aipi").innerHTML = tot.ip};
+	document.getElementById("key").onclick = function() {var copy = document.getElementById("key");copy.select();copy.setSelectionRange(0,999999);document.execCommand("copy");Swal.fire({position: "top-center", icon: "success", title: "Apikey tersalin ke clipboard", timer: 1500, showClass: {popup: 'animate__animated animate__lightSpeedInLeft'},hideClass: {popup: 'animate__animated animate__hinge'}});}
+	setInterval(refreshTime, 1000);
+</script>
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=fuck"></script>
+{% endblock %}

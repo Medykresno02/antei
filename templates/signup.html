@@ -1,0 +1,91 @@
+{% extends "signn.html" %}
+{% block title %}Sign Up {% endblock %}
+{% block content %} 
+<script>
+    const Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+    })
+    {% if terkirim %}
+        Toast.fire({
+            icon:"success",
+            title:"{{terkirim}}"
+        })
+    {% endif %}
+    {% if msg == "Email" %}
+        Toast.fire({
+            icon:'error',
+            title:'Email & No Hp Telah Terdaftar'
+        })
+    {% elif msg == False %}
+        Toast.fire({
+            icon:'warning',
+            title:'Email & Password Minimal 5 karakter'
+        })
+    {% elif msg %}
+        Toast.fire({
+            icon:'error',
+            title:'{{msg}}'
+        })
+    {% endif %}
+
+</script>
+<h1 class="h3 mb-3 fw-normal">Sign Up</h1>
+{% csrf_token %}
+<label for="room" class="sr-only">Username</label>
+<input type="text" class="form-control" name="nama" placeholder="Username" required autofocus>
+<label for="room" class="sr-only">Email</label>
+<input type="text" class="form-control" name="email" placeholder="Email" required autofocus>
+<label for="room" class="sr-only">No Hp</label>
+<input type="number" class="form-control" name="hp" placeholder="No Hp" required autofocus>
+<label for="pass" class="sr-only">Password</label>
+<input type="password" class="form-control" name="password" placeholder="Password" required>
+<label for="room" class="sr-only">Verification Method</label>
+<select class="form-select" name="vmethod" aria-label="test" style="margin-bottom: 10px;" onchange="methodType(this);">
+    <option value="whatsapp" selected>WhatsApp</option>
+    <option value="twilio">Twilio (WhatsApp)</option>
+    <option value="email">Email</option>
+</select>
+<img src="data:image/png;base64, {{captcha_img}}" height="50px" width="300px"/>
+<input type="text" class="form-control" name="jawaban" placeholder="Captcha" required autofocus>
+<div class="d-grid">
+	<button class="btn btn-lg btn-primary" type="submit">Submit</button>
+</div>
+<script>
+    function methodType(ctx){
+        console.log(ctx.value)
+        if(ctx.value === 'twilio') {
+            Swal.fire({
+            title: 'apakah kamu sudah memverifikasi whatsapp anda?',
+            showDenyButton: true,
+            showCancelButton: true,
+            confirmButtonText: 'belum',
+            denyButtonText: `sudah`,
+            }).then((result) => {
+            /* Read more about isConfirmed, isDenied below */
+            if (result.isConfirmed) {
+                window.open('https://api.whatsapp.com/send?phone=14155238886&text=join+somebody-saw', 'blank_')
+            } else if (result.isDenied) {
+                console.log()
+            }
+        })
+        }
+    }
+    {% if session %}
+        document.getElementsByName('nama')[0].value = '{{nama}}'
+        document.getElementsByName('email')[0].value = '{{email}}'
+        document.getElementsByName('hp')[0].value = '{{hp}}'
+        document.getElementsByName('password')[0].value = '{{password}}'
+        document.getElementsByName('vmethod')[0].value = '{{vmethod}}'
+    {% endif %}
+</script>
+
+
+{% endblock %}

@@ -1,0 +1,13 @@
+[
+	{
+		"path": "/tiktok",
+		"uri": "/tiktok?url=https://vt.tiktok.com/ZSJ4HfSA2/&apikey=",
+		"url": "https://vt.tiktok.com/ZSJ4HfSA2/",
+		"params": ["url","apikey"],
+		"python": "from requests import get\nparams = {'url': 'https://vt.tiktok.com/ZSJ4HfSA2/', 'apikey': 'key'}\nres = get('https://anteicodes.herokuapp.com/tiktok', params=params).json()\nprint(res)",
+		"javascript": "var request = require('request')\nvar opts = {\n\t'method': 'GET',\n\t'url': 'https:/blaablaa.com/'\n};\nrequest(opts, function(error, response) {\n\tif (error) throw new Error(error);\n\tconsole.log(response.body);\n})",
+		"curl": "curl --location --request GET ",
+		"name": "tiktok video scraper",
+		"response": "{\n\t\"status\": 200, \n\t\"filesize\": \"1.6 MB\", \n\t\"description\": \"Paetuc\", \n\t\"likes\": \"1.3 M\", \n\t\"comments\": \"9.61 K\", \n\t\"reposts\": \"15.8 K\", \n\t\"duration\": 7, \n\t\"uploader\": \"annamariee \ud83c\uddf5\ud83c\udded\", \n\t\"upload_date\": \"21 - 06 - 2021\", \n\t\"video\": \"http://localhost:8000/result/b15a3ddb0972e885b9492564169d04d4aebefbd598e479bb607246df1bd6f3df\", \n\t\"audio\": \"http://localhost:8000/result/6c1dcb45a63283ac7e963e0322ced575090b1776d83664e20f9f35cb76e78931\", \n\t\"thumbnail\": \"http://localhost:8000/result/60bae373be6381616be193adc14499fe4abd097f054899adcaf6607d8ea6a2cd\"\n}"
+	}
+]

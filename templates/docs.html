@@ -1,0 +1,61 @@
+{% extends '_base.html' %}
+{% load static %}
+{% block title %} Dokumentasi {{title_panel}} {% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'assets/css/prism.css' %}">
+<script src="{% static 'assets/js/prism.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=css&amp;skin=sons-of-obsidian"></script>
+<div class="col">
+	<div class="card radius-10 border-start border-0 border-2 border-secondary">
+		<div class="card-body">
+			<button class="btn btn-secondary card-title">{{title_panel}}</button>
+			<hr/>
+			<!--
+			<div class="input-group mb-3">
+				<button id="get" class="btn btn-secondary">GET</button>
+				<input class="form-control" value="" id="screept1" readonly="" aria-label="{{title}}" aria-describedby="{{title}}">
+				<a id="screept" href="" class="btn btn-secondary">POST</a>
+			</div>
+			-->
+			<button class="btn btn-secondary card-title">Parameter</button>
+			{% for par in keys %}
+			<li class="card-text">{{par}}</li>
+			{% endfor %}
+			{% for codes in code %}
+			{% if codes.language == "Curl" %}
+			<hr/>
+			<button class="btn btn-secondary card-title">{{codes.language}}</button>
+			<pre class="{{codes.language_code}}">
+				<code>{{codes.code}}
+				</code>
+			</pre>
+			{% endif %}
+			{% endfor %}
+			{% for codes in code %}
+			{% if codes.language == "Python" %}
+			<hr/>
+			<button class="btn btn-secondary card-title">{{codes.language}}</button>
+			<pre class="{{codes.language_code}}">
+				<code>{{codes.code}}
+				</code>
+			</pre>
+			{% endif %}
+			{% endfor %}
+			{% for codes in code %}
+			{% if codes.language == "Response" %}
+			<hr/>
+			<button class="btn btn-secondary card-title">{{codes.language}}</button>
+			<pre class="{{codes.language_code}}">
+				<code>{{codes.code}}
+				</code>
+			</pre>
+			{% endif %}
+			{% endfor %}
+		</div>
+	</div>
+</div>
+<script>
+	document.getElementById("screept").setAttribute("href", `${window.origin}/{{path_api}}?{{params|safe}}&apikey={{apikey}}`)
+	document.getElementById("screept1").setAttribute("value", `${window.origin}/{{path_api}}?{{params|safe}}&apikey={{apikey}}`)
+</script>
+{% endblock %}

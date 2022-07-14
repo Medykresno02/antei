@@ -1,0 +1,91 @@
+{% extends "_base.html" %}
+{% block title %}Contacts{% endblock %}
+{% block content %}
+<!--
+<script src="static/assets/js/ghprofile.js"></script>
+<style>
+	.profile {
+		display: block;
+		justify-content: center;
+		margin-top: auto;
+	}
+	.profile div {
+		margin: auto;
+	}
+
+	@media screen and (max-width: 1000px) {
+		.profile {
+			flex-direction: column;
+		}
+	}
+</style>
+<div class="profile">
+	<profile-card data-theme="dark" data-user="MhankBarBar" wa-contact="+6285892766102"></profile-card>
+	<profile-card data-theme="dark" data-user="plucyvrz" wa-contact="+6282125072597"></profile-card>
+	<profile-card data-theme="dark" data-user="Krypton-Byte" wa-contact="+62813172366436" custom-name="Krypton-Byte" custom-img="static/assets/images/krypton.jpeg"></profile-card>
+	<profile-card data-theme="dark" data-user="yanarie123" wa-contact="+6285782946968" custom-name="Arie" custom-img="static/assets/images/Arie.jpeg" custom-desc="Loli Hunter"></profile-card>
+</div>
+-->
+<div class="row row-cols-1 row row-cols-md-2 row row-cols-xl-4">
+	<div class="col-xl-3 col-lg-6 col-md-6">
+		<div class="card card-block card-stretch card-height">
+			<div class="d-flex align-items-center mb-4">
+				<img class="img-fluid avatar-90 rounded-circle" src="https://avatars.githubusercontent.com/u/55822959" target="_blank" alt="MhankBarBar">
+				<div class="d-flex doc-social ml-4">
+					<a href="https://api.whatsapp.com/send?phone=6285892766102"><i class="lab la-whatsapp text-success"></i></a>
+					<a href="https://twitter.com/barMhank"><i class="lab la-twitter"></i></a>
+					<a href="https://www.instagram.com/duar_amjay/"><i class="lab la-instagram mr-2 text-danger"></i></a>
+					<a href="https://github.com/MhankBarBar"><i class="lab la-github text-dark"></i></a>
+				</div>
+			</div>
+			<h4 class="text-center">MhankBarBar</h4>
+			<p class="font-size-16 text-center">Just an introverted boy who likes anime and cosplayers♥️</p>
+		</div>
+	</div>
+	<div class="col-xl-3 col-lg-6 col-md-6">
+		<div class="card card-block card-stretch card-height">
+			<div class="d-flex align-items-center mb-4">
+				<img class="img-fluid avatar-90 rounded-circle" src="https://avatars.githubusercontent.com/u/52121207" target="_blank" alt="Krypton">
+				<div class="d-flex doc-social ml-4">
+					<a href="https://api.whatsapp.com/send?phone=6283172366463"><i class="lab la-whatsapp text-success"></i></a>
+					<a href="https://www.facebook.com/krypton.byte.5"><i class="lab la-facebook"></i></a>
+					<a href="https://www.instagram.com/krypton_byte/"><i class="lab la-instagram mr-2 text-danger"></i></a>
+					<a href="https://github.com/Krypton-Byte"><i class="lab la-github text-dark"></i></a>
+				</div>
+			</div>
+			<h4 class="text-center">Krypton Byte</h4>
+			<p class="font-size-16 text-center">XD</p>
+		</div>
+	</div>
+	<div class="col-xl-3 col-lg-6 col-md-6">
+		<div class="card card-block card-stretch card-height">
+			<div class="d-flex align-items-center mb-4">
+				<img class="img-fluid avatar-90 rounded-circle" src="https://avatars.githubusercontent.com/u/34460245" target="_blank" alt="plucyvrz">
+				<div class="d-flex doc-social ml-4">
+					<a href="https://api.whatsapp.com/send?phone=6282125072597"><i class="lab la-whatsapp text-success"></i></a>
+					<a href="https://www.facebook.com/callmedeplucyvrz/"><i class="lab la-facebook"></i></a>
+					<a href="https://www.instagram.com/antei.codes/"><i class="lab la-instagram mr-2 text-danger"></i></a>
+					<a href="https://github.com/plucyvrz"><i class="lab la-github text-dark"></i></a>
+				</div>
+			</div>
+			<h4 class="text-center">Plucyvrz</h4>
+			<p class="font-size-16 text-center">☘️ Nothing special, Just a man who likes many cosplayers ^_^ - ❤ Taylor Swift ❤</p>
+		</div>
+	</div>
+	<div class="col-xl-3 col-lg-6 col-md-6">
+		<div class="card card-block card-stretch card-height">
+			<div class="d-flex align-items-center mb-4">
+				<img class="img-fluid avatar-90 rounded-circle" src="static/assets/images/Arie.jpeg" target="_blank" alt="MhankBarBar">
+				<div class="d-flex doc-social ml-4">
+					<a href="https://api.whatsapp.com/send?phone=6285782946968"><i class="lab la-whatsapp text-success"></i></a>
+					<a href="https://www.facebook.com/yance.tuhehay"><i class="lab la-facebook"></i></a>
+					<a href="https://www.instagram.com/yanarie22/"><i class="lab la-instagram mr-2 text-danger"></i></a>
+					<a href="https://github.com/yanarie123"><i class="lab la-github text-dark"></i></a>
+				</div>
+			</div>
+			<h4 class="text-center">Arie</h4>
+			<p class="font-size-16 text-center">Loli Hunter</p>
+		</div>
+	</div>
+</div>
+{% endblock content %}

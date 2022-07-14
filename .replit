@@ -1,0 +1,2 @@
+language = "python3"
+run = "chmod +x bin/ffmpeg;poetry install;python manage.py runserver 0.0.0.0:3000 --insecure"

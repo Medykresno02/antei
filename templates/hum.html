@@ -1,0 +1,70 @@
+{% extends "_base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
+<div class="col-lg-3 col-md-6">
+	<div class="bottom-left shadow-showcase card card-block card-stretch card-height position-relative overflow-hidden card-overlay-image">
+		<div class="card-body">
+			<div class="d-flex align-items-center justify-content-between">
+				<div class="iq-cart-image">
+					<lord-icon src="https://cdn.lordicon.com/kbtmbyzy.json"trigger="loop"colors="primary:#e83a30,secondary:#30c9e8"style="width:80px;height:80px"></lord-icon>
+				</div>
+				<div class="iq-cart-text">
+					<h2>Waktu</h2>
+					<p id="times" class="mb-0">00:00:00</p>
+				</div>
+			</div>
+			<div class="iq-progress-linear d-inline-block w-100">
+				<div class="iq-progress-bar bg-dark iq-progress-bar">
+					<span id="tod" class="bg-danger" data-percent="1"></span>
+				</div>
+			</div>
+		</div>
+		<div class="overlay-image svg-danger">
+		     <svg height="100%" viewBox="0 0 264 113" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M108.5 68C82.4829 96.2795 31.0226 108.712 4.54413 112H259C262.2 112 263.333 108.667 263.5 107V6C263.5 1.6 259.167 0.166667 257 0H192.5C172.1 3.2 128 46.6667 108.5 68Z" /></svg>
+		</div>
+	</div>
+</div>
+<div class="col-lg-3 col-md-6">
+	<div class="bottom-left shadow-showcase card card-block card-stretch card-height position-relative overflow-hidden card-overlay-image">
+		<div class="card-body">
+			<div class="d-flex align-items-center justify-content-between">
+				<div class="iq-cart-image">
+					<lord-icon src="https://cdn.lordicon.com/wrprwmwt.json" trigger="loop"colors="primary:#e83a30,secondary:#30c9e8" style="width:80px;height:80px"></lord-icon>
+				</div>
+				<div class="iq-cart-text">
+					<h2>IP Kamu</h2>
+					<p id="aipi" class="mb-0">127.0.0.1</p>
+				</div>
+			</div>
+		</div>
+		<div class="overlay-image svg-danger">
+		     <svg height="100%" viewBox="0 0 264 113" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M108.5 68C82.4829 96.2795 31.0226 108.712 4.54413 112H259C262.2 112 263.333 108.667 263.5 107V6C263.5 1.6 259.167 0.166667 257 0H192.5C172.1 3.2 128 46.6667 108.5 68Z" /></svg>
+		</div>
+	</div>
+</div>
+<div class="col-lg-3 col-md-6">
+	<div class="bottom-left shadow-showcase card card-block card-stretch card-height position-relative overflow-hidden card-overlay-image">
+		<div class="card-body">
+			<div class="d-flex align-items-center justify-content-between">
+				<div class="iq-cart-image">
+					<lord-icon src="https://cdn.lordicon.com/tyounuzx.json" trigger="loop"colors="primary:#e83a30,secondary:#30c9e8" style="width:80px;height:80px"></lord-icon>
+				</div>
+				<div class="iq-cart-text">
+					<h2>Visitor</h2>
+					<p id="visitor" class="mb-0">0</p>
+				</div>
+			</div>
+		</div>
+		<div class="overlay-image svg-danger">
+		     <svg height="100%" viewBox="0 0 264 113" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M108.5 68C82.4829 96.2795 31.0226 108.712 4.54413 112H259C262.2 112 263.333 108.667 263.5 107V6C263.5 1.6 259.167 0.166667 257 0H192.5C172.1 3.2 128 46.6667 108.5 68Z" /></svg>
+		</div>
+	</div>
+</div>
+<script>
+	function refreshTime() {var date = new Date();var hours = date.getHours() < 10 ? '0'+date.getHours() : date.getHours();var minutes = date.getMinutes() < 10 ? '0'+date.getMinutes() : date.getMinutes();var seconds = date.getSeconds() < 10 ? '0'+date.getSeconds() : date.getSeconds();var dateString = hours + ':' + minutes + ':' + seconds;document.getElementById('times').innerHTML = dateString;$("#tod").attr("data-percent", `${100/24*date.getHours()}`);};
+	function fuck(tot) {document.getElementById("aipi").innerHTML = tot.ip};
+	setInterval(refreshTime, 1000);
+</script>
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=fuck"></script>
+{% endblock %}
